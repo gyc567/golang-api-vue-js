@@ -49,7 +49,15 @@ func NewTask(title string, body string) (Task, error) {
 	// t, err := time.Parse("2006-01-02", "2011-01-19")
 	// t.String(); t.Format("2006-01-02 15:04:05")
 	// time.Date(2009, time.November, 10, 23, 0, 0, 0, time.UTC)
-	task := Task{uuid.NewV4().String(), title, body, time.Now()}
+	//	err,id:=uuid.NewV4().String()
+	u2, err1 := uuid.NewV4()
+	if err1 != nil {
+		//fmt.Printf("NewTask get uuid, went wrong: %s", err)
+		beego.Info("NewTask get uuid, went wrong: %s", err1)
+		return Task{}, err1
+	}
+
+	task := Task{u2.String(), title, body, time.Now()}
 
 	err := validateTask(task);
 	if err != nil {
@@ -66,7 +74,14 @@ func (t Tasks) Save(task Task) (string, error) {
 		return "", err
 	}
 
-	task.Id = uuid.NewV4().String();
+	//	task.Id = uuid.NewV4().String();
+	u2, err1 := uuid.NewV4()
+	if err1 != nil {
+		//fmt.Printf("NewTask get uuid, went wrong: %s", err)
+		beego.Info("Save get uuid, went wrong: %s", err1)
+		return "", err
+	}
+	task.Id =u2.String()
 	t[task.Id] = &task
 	return task.Id, nil
 }
