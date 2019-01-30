@@ -2,7 +2,7 @@ package tests
 
 import (
 	"testing"
-	. "github.com/guldmitry/go-api-vue-js/models"
+	. "github.com/gyc567/golang-api-vue-js/models"
 )
 
 func newTaskOrFatal(t *testing.T, title string, body string) Task {

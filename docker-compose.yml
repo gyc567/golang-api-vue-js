@@ -3,11 +3,11 @@ services:
   golang:
     build: ./conf/docker/golang
     container_name: gavj-go
-    command: bee run github.com/guldmitry/go-api-vue-js -downdoc=true -gendoc=true
+    command: bee run github.com/gyc567/golang-api-vue-js -downdoc=true -gendoc=true
     ports:
       - "8080:8080"
     volumes:
-      - ./:/go/src/github.com/guldmitry/go-api-vue-js
+      - ./:/go/src/github.com/gyc567/golang-api-vue-js
     depends_on:
       - db
     networks:

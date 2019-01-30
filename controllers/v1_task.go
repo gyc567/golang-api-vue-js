@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
-	"github.com/guldmitry/go-api-vue-js/models"
+	"github.com/gyc567/golang-api-vue-js/models"
 	"github.com/satori/go.uuid"
 	"encoding/json"
 )

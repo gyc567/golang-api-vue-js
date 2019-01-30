@@ -5,7 +5,7 @@ import (
 	"log"
 	"github.com/astaxie/beego/validation"
 	"github.com/astaxie/beego"
-	"github.com/guldmitry/go-api-vue-js/models"
+	"github.com/gyc567/golang-api-vue-js/models"
 )
 
 type TaskController struct {

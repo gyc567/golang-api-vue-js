@@ -4,7 +4,7 @@
 package routers
 
 import (
-	"github.com/guldmitry/go-api-vue-js/controllers"
+	"github.com/gyc567/golang-api-vue-js/controllers"
 	"github.com/astaxie/beego"
 )
 

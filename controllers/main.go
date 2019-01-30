@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
-	"github.com/guldmitry/go-api-vue-js/models"
+	"github.com/gyc567/golang-api-vue-js/models"
 	"encoding/json"
 	"time"
 	"github.com/astaxie/beego/orm"
@@ -126,7 +126,7 @@ func (c *MainController) Prepare() {
 			manager[v.Id] = v
 		}
 		// Saving models.Tasks in session directly causes error on server restart:
-		// gob: name not registered for interface: "github.com/guldmitry/go-api-vue-js/models.Tasks"
+		// gob: name not registered for interface: "github.com/gyc567/golang-api-vue-js/models.Tasks"
 		v, err := json.Marshal(manager)
 		if err != nil {
 			beego.Error(err)
